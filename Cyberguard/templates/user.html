@@ -1,0 +1,20 @@
+{% extends "template.html" %}
+
+{% block title %}Cyberguard{% endblock %}
+
+{% block id %}user_account{% endblock %}
+
+{% block main %}
+
+<div id="user_account">
+    <h1>Welcome <div class="hi" >{{ user.name }}</div> </h1>
+    <h2>You have <span class="hi">{{ nbr }}</span> accounts saved on Cyberguard</h2>
+
+    <form action="/deleteAccount" method="post">
+        <input type="hidden" name="id" value="{{ user.id }}">
+        <input class="button" type="submit" value="Delete account">
+    <h3><span class="important" style="color: #000000;">Just remenber that this action cannot be undone</span></h3>
+</form>
+</div>
+
+{% endblock %}

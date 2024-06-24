@@ -1,0 +1,54 @@
+{% extends "template.html" %}
+
+{% block title %}Cyberguard{% endblock %}
+
+{% block id %}{% endblock %}
+
+{% block main %}
+
+<div class="firstContainer">
+  <h1>Welcome to <span>Cyberguard</span></h1>
+  <h2>Secure Your Digital World</h2>
+</div>
+
+<div class="SecondContainer">
+  <h1><span>What we provide in Cyberguard?</span></h1>
+  <div class="feature">
+    <p>Protect your data with ease. Cyberguard's built-in <span>encryption</span> scrambles sensitive information, keeping it safe from prying eyes. <span>Decrypt</span> it anytime you need with just a few clicks.</p>
+    <p class="important">Send secret messages with ease! Cyberguard's encryption tool lets you scramble messages with a few clicks. Just type your message, choose encrypt or decrypt, and we'll handle the rest.</p>
+    <p><span>Why it matters:</span> This keeps your messages hidden from prying eyes, making it ideal for sending sensitive information securely.</p>
+  </div>
+</div>
+
+<div class="compareContainer">
+  <div class="split left">
+    <h1 class="h1explore" >Encryption</h1>
+    <a class="explore leftex" href="/encryption">Explore Now</a>
+  </div>
+  <div class="split right">
+    <h1 class="h1explore" >Decryption</h1>
+    <a class="explore rightex" href="/decryption">Explore Now</a>
+  </div>
+</div>
+
+<div class="FourthContainer">
+  <h1><span>Password Generator</span></h1>
+  <div class="feature">
+    <p class="important">Level up your security with uncrackable passwords!</p>
+    <p>Cyberguard's password generator creates strong, unique passwords for all your online accounts. Ditch the weak passwords hackers love and take control of your security.</p>
+  </div>
+  <a class="explore" style="color: #217c65;" href="/genPass">Explore Now</a>
+</div>
+
+<div class="FifthContainer">
+  <h1><span>Password Manager</span></h1>
+  <div class="feature">
+    <p class="important">Never forget a password again!</p>
+    <p>Cyberguard's secure password manager stores all your passwords in one place. Access them anytime, anywhere, with just your Cyberguard login. Stop the struggle and keep your accounts safe.</p>
+  </div>
+  <a class="explore" style="color: #217c65;" href="/managerPass">Explore Now</a>
+</div>
+
+<script src="/static/scripts/app.js"></script>
+
+{% endblock %}

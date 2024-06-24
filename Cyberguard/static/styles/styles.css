@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* ---------- Root Variables ---------- */
+:root {
+    --bg-color: #ffffff;
+    --primary-color: #1a73e8;
+    --secondary-color: #e8f0fe;
+    --text-color: #202124;
+    --heading-color: #174ea6;
+    --hover-color: #1664c0;
+    --border-color: #dfe1e5;
+    --font-family: 'Montserrat', sans-serif;
+    --transition-speed: 300ms;
+}
+
+/* ---------- Global Styles ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: var(--hover-color);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- Header ---------- */
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    font-size: 14px;
+    margin-right: 6px;
+}
+
+.logo span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.navbar {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.navbar a {
+    margin: 0 10px;
+    font-size: 0.9rem;
+    font-weight: 200;
+    transition: color var(--transition-speed);
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--secondary-color);
+}
+
+/* ---------- Containers ---------- */
+.firstContainer, .SecondContainer, .FourthContainer, .FifthContainer, .compareContainer .split {
+    padding: 40px;
+    color: #000000;
+}
+
+.firstContainer {
+    background: url('../images/container.png') no-repeat center;
+    background-size: cover;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.firstContainer h1, .SecondContainer h1, .FourthContainer h1, .FifthContainer h1 {
+    margin-bottom: 15px;
+    font-size: 3rem;
+    color: #000000;
+}
+
+.firstContainer h2 {
+   font-size: 2rem;
+   margin-top: 30px;
+}
+
+.scroll {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    transition: var(--transition-speed);
+}
+
+.scroll:hover {
+    background-color: var(--hover-color);
+}
+
+.SecondContainer, .FourthContainer, .FifthContainer {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.SecondContainer h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.SecondContainer p, .FourthContainer p, .FifthContainer p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* ----- Compare Container ----- */
+.compareContainer {
+  display: flex;
+  height: 50vh;
+  text-align: center;
+}
+
+.compareContainer .split {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: flex var(--transition-speed);
+}
+
+.compareContainer .split.left {
+  background: url('../images/split1.png') no-repeat center;
+  background-size: cover;
+}
+
+.compareContainer .split.right {
+  background: url('../images/split2.png') no-repeat center;
+  background-size: cover;
+}
+
+.compareContainer .split::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.compareContainer .split:hover {
+  flex: 2;
+}
+
+.compareContainer .split:not(:hover) {
+  flex: 1;
+}
+
+.compareContainer .split h1 {
+  z-index: 1;
+  font-size: 3rem;
+}
+
+.compareContainer .split a {
+  z-index: 1;
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  transition: var(--transition-speed);
+}
+
+.compareContainer .split a:hover {
+  background-color: var(--hover-color);
+}
+/* ---------- Specific Containers ---------- */
+#Encryption, #Decryption, #login, #register, #user, #badmsg, #passwordsGen, #passman {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+}
+#Encryption, #Decryption {
+  background: url('/static/images/2container.png') no-repeat center center, #ffffff;
+  background-size: cover;
+  height: 180vh;
+}
+
+#login, #register {
+  background: url('/static/images/form.png'), rgba(10, 25, 47, 0.99);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 80%;
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.login-form, .register-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.login-form__content {
+  padding: 20px;
+}
+
+.login-form__header {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #217c65;
+}
+
+/* ---------- Forms ---------- */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"], input[type="password"], input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus {
+  border-color: #000000;
+}
+
+textarea::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+textarea:focus {
+  border-color: #000000;
+}
+
+button.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  color: #000000;
+  background-color: #ffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+button.btn-primary:hover {
+  background-color: #217c65;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 25px 10px 25px 10px;
+  color: #000000;
+  background-color: var(--sec-color);
+  border: 1px solid #008CBA;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.button:hover {
+  background-color: #217c65;
+  color: #ffffff;
+}
+/* Badmsg Section */
+#badmsg {
+  background: url(/static/images/bad.png) no-repeat center center/cover;
+  color: #ffffff;
+}
+
+#badmsg h1 {
+  font-size: 55px;
+  margin-top: 180px;
+  text-align: center;
+}
+
+#badmsg a {
+  position: absolute;
+  top: 45%;
+  left: 41%;
+  transform: translate(-50%, -50%);
+}
+
+/* User Account Section */
+#user_account {
+  background: url(/static/images/2container.png) no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#user_account h1,
+#user_account h2,
+#user_account h3,
+#user_account h4 {
+  font-family: 'American Typewriter', serif;
+  text-align: center;
+  margin: 20px 0;
+}
+
+#user_account h1 {
+  font-size: 4rem;
+  margin-top: 25%;
+}
+
+#user_account h2,
+#user_account h3 {
+  font-size: 2rem;
+}
+
+#user_account h4 {
+  font-size: 1.5rem;
+}
+
+#user_account .button {
+  display: block; /* Ensures the button is block level */
+  margin: 20px auto; /* Centers the button horizontally */
+  width: 200px; /* Increases the width */
+  padding: 1rem; /* Increases the padding */
+  font-size: 1.2rem; /* Increases the font size */
+  text-align: center; /* Centers the text within the button */
+  background-color: #0000; /* Uses the secondary color */
+  color: #217c65; /* Sets the text color to white */
+  border: none; /* Removes any default border */
+  border-radius: 5px; /* Adds rounded corners */
+  cursor: pointer; /* Changes cursor to pointer */
+  transition: background-color 0.3s ease; /* Adds a transition effect */
+}
+
+#user_account .button:hover {
+  background-color: #000000; /* Changes background color on hover */
+}
+
+
+#user_account .input-field {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ---------- Background ---------- */
+#passwordsGen {
+  background: url('../images/form.png') no-repeat center/cover, #112240ef;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 110vh;
+  padding: 10px;
+  margin: 0;
+}
+
+#passman {
+  background: url('../images/form.png') no-repeat center/cover, #112240ef;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+  padding: 20px;
+  min-height: 150vh;
+  display: flex;
+}
+
+/* ---------- Headings ---------- */
+h2 {
+  margin: 10px 0 20px;
+  text-align: center;
+  font-size: 25px;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150vh;
+  max-width: 700px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #ffff;
+}
+
+.section:hover {
+  background-color: #ffff /* Adjust hover color */
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  border: none;
+  background-color: #0000; /* button background color */
+  color: #ffff;
+  font-size: 25px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.btn-large {
+  display: block;
+  width: 100%;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #ffff;
+  background-color: #ffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #217c65;
+}
+
+/* ---------- Tables ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  background-color: #ffff;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+table th {
+  background-color: #ffff;
+}
+
+thead tr {
+  background-color: #ffff;
+}
+
+tbody tr:nth-of-type(odd) {
+  background-color: #ffff;
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: #ffff
+}
+/* ---------- Media Queries ---------- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        margin: 5px 0;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    .compareContainer {
+        flex-direction: column;
+    }
+
+    .compareContainer .split {
+        height: 50vh;
+    }
+
+    .compareContainer .split:hover {
+        flex: 1;
+    }
+}

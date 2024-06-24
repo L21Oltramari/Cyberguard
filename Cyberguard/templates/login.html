@@ -1,0 +1,28 @@
+{% extends "template.html" %}
+
+{% block title %}Cyberguard{% endblock %}
+
+{% block id %}login{% endblock %}
+
+{% block main %}
+
+<form class="login-form" action="/login" method="POST">
+  <div class="login-form__logo-container">
+    <a href="/"><img class="login-form__logo" src="/static/images/logobk.png" alt="Logo" /></a>
+  </div>
+  <div class="login-form__content">
+    <div class="login-form__header">Log in</div>
+    <input class="login-form__input" autofocus autocomplete="off" required type="text" pattern="[A-Za-z0-9]+\_?[A-Za-z0-9]+" name="username" placeholder="Username" />
+    <input class="login-form__input" required type="password" name="password" pattern="[A-Za-z0-9]+" min="8" max="20" placeholder="Password" />
+    <button class="login-form__button" required type="submit">Log In</button>
+    <div class="login-form__links"  class="login-form__header" style="color: #000000;" > You don't have account ?</div>
+    <div class="login-form__links">
+    <a class="login-form__link" class="login-form__header" href="/register">Register</a>
+    </div>
+    <div class="login-form__links">
+      <a class="login-form__link" href="/"> Cancel </a>
+    </div>
+  </div>
+</form>
+
+{% endblock %}

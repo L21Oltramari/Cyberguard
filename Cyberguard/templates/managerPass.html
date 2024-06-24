@@ -1,0 +1,84 @@
+{% extends "template.html" %}
+
+{% block title %}Cyberguard{% endblock %}
+
+{% block id %}manager{% endblock %}
+
+{% block main %}
+
+<div class="container">
+  <div class="section">
+    <h2 class="action" style="color: #217c65;">Add a new account to your password manager</h2>
+    <form class="form" action="/managerPass" method="post">
+      <label for="name">Name or Email</label>
+      <input id="name" type="text" autocomplete="off" required autofocus name="name" placeholder="Name or Email" />
+
+      <label for="password">Password</label>
+      <input id="password" type="password" autocomplete="off" required name="password" placeholder="Password" min="1" max="12" />
+
+      <label for="link">Link</label>
+      <input id="link" type="text" autocomplete="off" required name="link" placeholder="Link" />
+
+      <input class="button" style="color: #202124;" type="submit" value="Add account" />
+    </form>
+  </div>
+
+  {% if accounts %}
+  <div class="section">
+    <h2 class="action">Your Accounts</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name oe email</th>
+          <th>Password</th>
+          <th>Link</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in accounts %}
+        <tr>
+          <td>{{ row.name }}</td>
+          <td>
+            <input id="password-{{ row.id }}" type="password" value="{{ row.password }}" class="password-input" />
+            <i id="toggle-password-{{ row.id }}" class="ri-lock-unlock-fill toggle-icon" onclick="togglePassword('{{ row.id }}')"></i>
+          </td>
+          <td>
+            <a href="{{ row.link }}" target="_blank">Visit Link <i class="ri-link"></i></a>
+          </td>
+          <td>
+            <form action="/goupdate" method="post" class="inline-form">
+              <input type="hidden" name="id" value="{{ row.id }}" />
+              <input class="button" style="color: #000000;" type="submit" value="Edit" />
+            </form>
+            <form action="/delete" method="post" class="inline-form">
+              <input type="hidden" name="id" value="{{ row.id }}" />
+              <input class="button" style="color: #000000;"  type="submit" value="Delete" />
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endif %}
+</div>
+
+<script src="/static/scripts/managerPass.js"></script>
+<script>
+  function togglePassword(id) {
+    const passwordField = document.getElementById(`password-${id}`);
+    const toggleIcon = document.getElementById(`toggle-password-${id}`);
+    if (passwordField.type === 'password') {
+      passwordField.type = 'text';
+      toggleIcon.classList.remove('ri-lock-unlock-fill');
+      toggleIcon.classList.add('ri-lock-fill');
+    } else {
+      passwordField.type = 'password';
+      toggleIcon.classList.remove('ri-lock-fill');
+      toggleIcon.classList.add('ri-lock-unlock-fill');
+    }
+  }
+</script>
+
+{% endblock %}
