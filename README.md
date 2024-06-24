@@ -50,21 +50,29 @@ CS50x is Harvard University's introductory course to the intellectual enterprise
 
 # Topics Covered:
 
-Abstraction
+Scratch
+
+C
+
+Arrays
 
 Algorithms
 
+Memory
+
 Data Structures
 
-Encapsulation
+Python
 
-Resource Management
+Artificial Intelligence
 
-Security
+SQL
 
-Software Engineering
+HTML, CSS, JavaScript
 
-Web Development
+Flask
+
+Cybersecurity
 
 
 
