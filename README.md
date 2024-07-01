@@ -1,5 +1,6 @@
 # Cyberguard
 CS50 final project by HarvardX
+For the video Demo visit: [Video demo](https://cs50.harvard.edu/x/2024/)
 
 # Description
 CyberGuard is a cutting-edge cybersecurity web application designed to safeguard your online accounts and sensitive data from cyber threats. It provides an array of robust features tailored to enhance your digital security and ensure peace of mind in an increasingly connected world.
@@ -90,11 +91,5 @@ CSS
 
 HTML
 
-
-Real-World Applications:
-Problem sets are inspired by various domains, including biology, cryptography, finance, forensics, and gaming.
-
-Course Popularity:
-The on-campus version, CS50, is the largest course at Harvard.
 
 For more information and to enroll in the CS50x course, visit: [CS50x 2024.](https://cs50.harvard.edu/x/2024/)
