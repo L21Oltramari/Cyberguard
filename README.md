@@ -7,7 +7,10 @@ For the video Demo visit: [Video demo](https://cs50.harvard.edu/x/2024/)
 CyberGuard is a cutting-edge cybersecurity web application designed to safeguard your online accounts and sensitive data from cyber threats. It provides an array of robust features tailored to enhance your digital security and ensure peace of mind in an increasingly connected world.
 
 # Key Features
-Message Encryption with Caesar Cipher: Encrypt and Decrypt Messages: Cyberguard allows users to encrypt messages using the Caesar cipher, ensuring that only recipients with the correct shift value can decrypt and read the messages.
+
+# Message Encryption with Caesar Cipher: 
+
+Encrypt and Decrypt Messages: Cyberguard allows users to encrypt messages using the Caesar cipher, ensuring that only recipients with the correct shift value can decrypt and read the messages.
 
 # Password Generator:
 
@@ -16,7 +19,6 @@ Create Strong Passwords: Generate strong, random passwords for your online accou
 # Password Manager: 
 
 Secure Credential Storage: Store login credentials for various online accounts in a secure location, making it easy to manage and access your passwords without compromising security.
-Benefits of Cyberguard
 Cyberguard is an essential tool for anyone looking to enhance their digital security. By providing strong password generation, secure storage for login credentials, and encrypted communication, it helps users safeguard their online presence effectively.
 
 # Technologies used
@@ -26,6 +28,7 @@ Defines the structure and layout of a web page.
 Specifies the text, images, and other media elements that a web page contains.
 
 CSS:
+
 Controls the appearance of elements on a web page.
 Manages colors, fonts, layout, and other visual properties to enhance the web page's aesthetics.
 
